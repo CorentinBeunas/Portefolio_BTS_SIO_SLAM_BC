@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille technologique - Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="btn-retour" aria-label="Retour à l'accueil">
+        <span></span>
+    </a>
+
+    <div class="logo"></div>
+
+    <div class="menu-deroulant">
+        <div class="barres" id="barres">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="menu-contenu" id="menuContenu">
+            <a href="contact.html">Contact</a>
+            <a href="veille.html">Veille technologique</a>
+            <a href="parcours.html">Information pratique</a>
+            <a href="competences.html">Compétences techniques</a>
+            <a href="projetbts.html">Projet durant le BTS</a>
+            <a href="cv.pdf" target="_blank" class="btn-cv">Voir mon CV</a>
+            <a href="cv.pdf" download class="btn-cv">Télécharger mon CV</a>
+        </div>
+    </div>
+</header>
+
+<main class="container projet2">
+
+    <section class="intro intro-projet2">
+
+        
+           <h1>Veille technologique</h1> 
+
+            <p> 
+
+                <h1>DETECTION DES DEEPFAKES</h1> 
+
+            </p> 
+
+         
+
+            <h2>Pourquoi ce sujet ?</h2> 
+
+            <p> 
+
+                J'ai choisi ce sujet car l'IA est en plein essors et on assiste à une course à la technologie entre la création de contenu IA et la quête de vérité 
+
+            </p> 
+
+         
+
+         
+
+            <h2>Articles et ressources</h2> 
+
+ 
+
+            <ul class="liste-veille"> 
+
+                <li> 
+
+                    <strong> La détection du flux sanguin sous la peau du visage </strong><br> 
+
+                    <p> 
+
+                        Intel a développé un outil appelé FakeCatcher pour détecter les deepfakes en analysant le flux sanguin du visage. Grâce à une technique nommée photopléthysmographie (PPG), l’intelligence artificielle observe les variations très subtiles de couleur de la peau provoquées par la circulation du sang lorsque une personne parle ou bouge. Ces signaux physiologiques, naturellement présents chez un humain réel, sont difficiles à reproduire fidèlement par les deepfakes. En examinant ces variations sur plusieurs images d’une vidéo, FakeCatcher peut déterminer en quelques millisecondes si un visage est authentique ou non, avec une précision annoncée de 96 %, offrant ainsi une nouvelle arme contre la désinformation et les usages malveillants des deepfakes. 
+ 
+                    </p> 
+                                        <p> 
+SOURCE : INTEL
+ </p>
+                </li> 
+
+ 
+
+                <li> 
+
+                    <strong> La détection des reflets dans les yeux </strong><br> 
+
+                    <p> 
+
+                        Des chercheurs de l’Université de Buffalo ont développé un outil capable de détecter les deepfakes en analysant les reflets de lumière dans les yeux. Dans une vraie photo, la cornée agit comme un miroir et les deux yeux présentent des reflets très similaires, puisqu’ils perçoivent la même scène. En revanche, les images générées par intelligence artificielle reproduisent souvent mal ces détails, ce qui crée des incohérences entre les reflets de l’œil gauche et de l’œil droit. L’outil repère ces différences en comparant la forme, l’intensité et la position des reflets lumineux, ce qui lui permet d’identifier les deepfakes avec une efficacité d’environ 94 % sur des portraits bien éclairés. 
+ </p> 
+                                        <p> 
+SOURCE : UNIVERSITY AT BUFFALO
+ </p>
+                </li> 
+
+            </ul> 
+
+        
+
+ 
+
+         
+
+            <h2>Mise en place de la veille</h2> 
+
+            <p> 
+
+               Pour approfondir mes connaissances sur la détection des deepfakes j’utilise le temps que je passe dans les transports en commun. Pour alimenter ma veille technologique j’utilise google Scholar ainsi que Youtube ou des articles de presse divers pour me faire mon propre avis grâce à différente source. 
+
+            </p> 
+
+ 
+        
+
+    </section>
+
+
+</main>
+
+<footer>
+    <p>© 2026 - Mon Portfolio</p>
+</footer>
+
+<script>
+const barres = document.getElementById("barres");
+const menuContenu = document.getElementById("menuContenu");
+
+barres.addEventListener("click", () => {
+    menuContenu.classList.toggle("open");
+});
+
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".menu-deroulant")) {
+        menuContenu.classList.remove("open");
+    }
+});
+</script>
+
+</body>
+</html>

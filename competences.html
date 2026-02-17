@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences techniques</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="btn-retour" aria-label="Retour à l'accueil">
+        <span></span>
+    </a>
+
+    <div class="logo"></div>
+    <div class="menu-deroulant">
+        <div class="barres" id="barres">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="menu-contenu" id="menuContenu">
+            <a href="contact.html">Contact</a>
+            <a href="veille.html">Veille technologique</a>
+            <a href="parcours.html">Information pratique</a>
+            <a href="competences.html">Compétences techniques</a>
+            <a href="projetbts.html">Projet durant le BTS</a>
+            <a href="cv.pdf" target="_blank" class="btn-cv">Voir mon CV</a>
+            <a href="cv.pdf" download class="btn-cv">Télécharger mon CV</a>
+        </div>
+        </div>
+    </div>
+
+</header>
+
+<main class="container">
+
+    <section class="intro">
+        <h1>Compétences techniques</h1>
+        <div class="bloc-parcours">
+            <h3>dévelopement</h3>
+            <p>
+<strong>html</strong> : C'est un langage de balisage utilisé pour la création de pages web, permettant notamment de définir des liens hypertextes.
+</p>
+ <p>
+<strong>css</strong> :  C'est est un langage de programmation utilisé pour la mise en forme d'une page web codée en HTML
+</p>
+ <p>
+<strong>php</strong> : C'est est un langage de scripts généraliste et Open Source, spécialement conçu pour le développement d'applications web
+</p>
+ <p>
+<strong>java</strong> : C'est un langage de programmation multiplateforme orienté objet
+</p>
+<p>
+<strong>sql</strong> : C'est un langage de programmation permettant de stocker et de traiter des informations dans une base de données relationnelle
+</p>
+ <p>
+<strong>Microsft Access</strong> : C'est un système de gestion de base de donnée relationnel permettant la création d'outil de saisie utilisant le VB comme language de programmation.
+            </p>
+             <p>
+<strong>VBA</strong> : C'est un langage de programmation dérivé du Visual Basic (VB)
+            </p>
+        </div>
+
+
+        <div class="bloc-parcours">
+            <h3>Montage vidéo</h3>
+            <p>
+                <strong>Filmora 14</strong> : C'est un logiciel de montage vidéo.
+            </p>
+</div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 - Mon Portfolio</p>
+</footer>
+
+
+<script>
+const barres = document.getElementById("barres");
+const menuContenu = document.getElementById("menuContenu");
+
+barres.addEventListener("click", () => {
+    menuContenu.classList.toggle("open");
+});
+
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".menu-deroulant")) {
+        menuContenu.classList.remove("open");
+    }
+});
+</script>
+
+</body>
+</html>

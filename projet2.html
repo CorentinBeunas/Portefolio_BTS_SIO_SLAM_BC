@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet - Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="btn-retour" aria-label="Retour à l'accueil">
+        <span></span>
+    </a>
+    <div class="logo"></div>
+
+    <div class="menu-deroulant">
+        <div class="barres" id="barres">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="menu-contenu" id="menuContenu">
+            <a href="contact.html">Contact</a>
+            <a href="veille.html">Veille technologique</a>
+            <a href="parcours.html">Information pratique</a>
+            <a href="competences.html">Compétences techniques</a>
+            <a href="projetbts.html">Projet durant le BTS</a>
+            <a href="cv.pdf" target="_blank" class="btn-cv">Voir mon CV</a>
+            <a href="cv.pdf" download class="btn-cv">Télécharger mon CV</a>
+        </div>
+    </div>
+</header>
+
+<main class="container projet2">
+
+    <section class="intro intro-projet2">
+        <h1>Stage Office National des Forêts</h1>
+        <img src="Officenf.png" alt="Photo de présentation" class="image-portfolio">
+
+         <div class="cadreimage">
+    <img src="captureozonef.png" alt="Photo de présentation" class="image-portfolioprojet2">
+</div>
+
+         <h2>Présentation du stage </h2><br>
+        <p>
+
+
+            Dans le cadre d'une migration de base de données dans le Réseau RENECOFOR à l'ONF qui est le Réseau national de suivie des écosysteme forestier.
+            J'ai eu pour mission de créer un formulaire de saisie de l'ozone qui est un gaz
+            dangeureux à une certaine concentration pour les arbres (forte oxydation ) pour remplacer une ancienne version.
+            Pour cela j'ai dû utiliser un système de gestion de base de donnée relationnelle? Microsoft Access qui m'a été imposé.
+            Dnas un premier temps il m'a fallut me former à Access pour ce faire j'ai eu recours à des tutoriels sur Youtube
+            ainsi qu'au forum de développement : Développer.net.
+
+            Puis grâce à la table correspondant aux données saisies BDD de l'ozone fourni par RENECOFOR j'ai pu tester les différentes fonctionalitées d'Access
+            pour créer une différentes versions du formulaire 
+
+            Pour réaliser ce projet j'ai dû mettre en place différente fonctionnalités afin de répondre au besoin d'homogénéité
+            des données pour l'implémentation en base de données.
+            Pour ce faire j'ai ajouter de nombreux filtre afin de m'assurer que les valeurs rentrées soit sous la forme et le type de données souhaité.
+            Puis j'ai ajouter différents messages d'erreurs personnalisé afin de prévenir l'utilisateur pour qu'il puisse modifier sa saisie.
+
+            Enfin j'ai ajouter différentes fonctionnalités pour rendre le formulaire le plus efficace, ergonomique et pratique à utiliser
+            afin de faciliter une tache redondante. 
+
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 - Mon Portfolio</p>
+</footer>
+
+<script>
+const barres = document.getElementById("barres");
+const menuContenu = document.getElementById("menuContenu");
+
+barres.addEventListener("click", () => {
+    menuContenu.classList.toggle("open");
+});
+
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".menu-deroulant")) {
+        menuContenu.classList.remove("open");
+    }
+});
+</script>
+
+</body>
+</html>

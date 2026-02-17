@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 1 - Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="btn-retour" aria-label="Retour à l'accueil">
+        <span></span>
+    </a>
+    <div class="logo"></div>
+
+    <div class="menu-deroulant" id="menu">
+        <div class="barres" id="barres">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+<div class="menu-contenu" id="menuContenu">
+            <a href="contact.html">Contact</a>
+            <a href="veille.html">Veille technologique</a>
+            <a href="parcours.html">Information pratique</a>
+            <a href="competences.html">Compétences techniques</a>
+            <a href="projetbts.html">Projet durant le BTS</a>
+            <a href="cv.pdf" target="_blank" class="btn-cv">Voir mon CV</a>
+            <a href="cv.pdf" download class="btn-cv">Télécharger mon CV</a>
+        </div>
+        
+    </div>
+</header>
+<main class="container projet1">
+
+    <section class="intro">
+        <h1>ED4free</h1>
+        <img src="ED4Free.png" alt="Photo de présentation" class="image-portfolio">
+
+    <iframe
+        src="https://www.youtube.com/embed/9iJMPffODXo?autoplay=1&mute=1" 
+        title="Vidéo Projet 1"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+    </iframe>
+        <p>
+            L’entreprise <strong> EDfree </strong> est une association à but non lucratif, créée en 2017, spécialisée dans les outils
+numériques éducatifs simples à utiliser, peu coûteux et off-line pour l’éducation et la formation dans
+les pays en développement qui peuvent être dépourvus de connexion internet.
+ED4free compte énormément sur les mini-serveurs informatiques sur lesquels des applications et
+des logiciels sont stockés comme par exemple Kiwix qui permet d’utiliser des ressources de
+Wikipédia. L’association utilise deux types de solutions pour livrer des serveurs à travers le monde.
+Tout d’abord l’association a utilisé des mini-serveurs, puis récemment, ED4free a développé une
+application permettant à un smartphone de devenir un serveur informatique.
+        </p>
+
+        <p>
+            Le but de cette vidéo a été de faire un tutoriel sur comment initialiser l'utilisation de 
+            l'apllication FileServer qui permet à un téléphone de devenir un serveur pour faire en sorte 
+            que d'autre téléphones puissent se connecter dessus via le partage de connexion du téléphone afin 
+            de pouvoir télécharger les ressouces numérique mise à disposition par le téléphone utilisant l'application. 
+            Ainsi que montrer les différentes fonctionalités de l'application et la marche à suivre pour son bon fonctionnement.
+        </p>
+</div>
+
+    <section class="projects">
+        <ul>
+        </ul>
+
+        <div class="decor-project"></div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 - Mon Portfolio</p>
+</footer>
+
+<script>
+const barres = document.getElementById("barres");
+const menuContenu = document.getElementById("menuContenu");
+
+barres.addEventListener("click", () => {
+    menuContenu.classList.toggle("open");
+});
+
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".menu-deroulant")) {
+        menuContenu.classList.remove("open");
+    }
+});
+</script>
+
+</body>
+</html>

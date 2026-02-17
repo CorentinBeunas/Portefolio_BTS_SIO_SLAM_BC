@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo"></div>
+    <div class="menu-deroulant" id="menu">
+        <div class="barres" id="barres">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="menu-contenu" id="menuContenu">
+            <a href="contact.html">Contact</a>
+            <a href="veille.html">Veille technologique</a>
+            <a href="parcours.html">Parcours professionnel</a>
+            <a href="competences.html">Compétences techniques</a>
+            <a href="projetbts.html">Projet durant le BTS</a>
+            <a href="CV_Beunas_Corentin_BTS_SIO_SLAM.pdf" target="_blank" class="btn-cv">Voir mon CV</a>
+            <a href="CV_Beunas_Corentin_BTS_SIO_SLAM.pdf" download class="btn-cv">Télécharger mon CV</a>
+        </div>
+    </div>
+</header>
+
+<main class="containerindex">
+
+    <section class="intro">
+        <h1>Welcome.</h1>
+        <p>
+            Je m'appelle <strong></strong>.<br>
+            Étudiant en BTS SIO SLAM 2ème année à Saint Aspais.
+            Je souhaite m'orienter dans le domaine de l'IA.
+            Je suis en recherche d'une alternace voici le leins de ma lettre de motivation : <a href="Lettre_de_motivation_alterance_beunas_corentin.pdf" target="_blank">lettre de motivation</a>
+        </p>
+        <p>
+            Je suis actuellement en 2ème année de BTS SIO (Service Informatique aux Organisation ) SLAM à <a href="https://institutionsaintaspais.fr/campus/">Saint-Aspais</a>. Cette formation permet d'acquerir des compétences comme
+            la création  d'application web, l'intégration de progiciels de gestion, l'installation et la configuration de micro-ordinateurs, de réseaux et de systèmes client-serveur.
+            Cette formation garde les aventages et la capacitée d'avoir des accompagnements plus personalisé comme en lycée et plus de liberté comme en faculté. Pour plus d'information sur la formation cliqué <a href="https://institutionsaintaspais.fr/formations/bts-services-informatiques-aux-organisations-option-slam-et-sisr/">ici</a>.
+            
+
+            
+
+
+
+        </p>
+    </section>
+    
+
+    <section class="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><a href="projet1.html">ED4free</a></li>
+            <li><a href="projet2.html">Formulaire Ozone ONF</a></li>
+            <a href="tableau.pdf" target="_blank" class="btn-cv">tableau récapitulatif projet</a>
+        </ul>
+
+        <div class="decor-project"></div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 - Mon Portfolio</p>
+</footer>
+
+<script>
+const barres = document.getElementById("barres");
+const menu = document.getElementById("menu");
+const menuContenu = document.getElementById("menuContenu");
+
+barres.addEventListener("click", () => {
+    menuContenu.classList.toggle("open");
+});
+
+menu.addEventListener("mouseleave", () => {
+    menuContenu.classList.remove("open");
+});
+</script>
+
+</body>
+</html>

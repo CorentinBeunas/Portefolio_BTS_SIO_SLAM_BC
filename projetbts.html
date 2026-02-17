@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Projets durant le BTS - Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="btn-retour" aria-label="Retour à l'accueil">
+        <span></span>
+    </a>
+
+    <div class="logo"></div>
+
+    <div class="menu-deroulant">
+        <div class="barres" id="barres">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="menu-contenu" id="menuContenu">
+            <a href="contact.html">Contact</a>
+            <a href="veille.html">Veille technologique</a>
+            <a href="parcours.html">Information pratique</a>
+            <a href="competences.html">Compétences techniques</a>
+            <a href="projetbts.html">Projet durant le BTS</a>
+            <a href="cv.pdf" target="_blank" class="btn-cv">Voir mon CV</a>
+            <a href="cv.pdf" download class="btn-cv">Télécharger mon CV</a>
+        </div>
+    </div>
+</header>
+
+<main class="container projet1">
+
+    <section class="intro">
+
+        <h1>Projets durant le BTS</h1>
+
+        <div class="bloc-parcours">
+            <h3>KOO2FOURCHETTE</h3>
+    <section class="intro">
+        <div class="cadreimage">
+    <img src="KOO2FOURCHETTE.png" alt="Photo de présentation" class="image-portfolio">
+</div>
+            <p>
+                KOO2FOURCHETTE est un projet réalisé en première année de BTS SIO où j'avais pour mission de créer un
+                site internet fonctionnel pour l'entreprise KOO2FOURCHETTE. Pour cela nous avions comme contrainte d'utiliser les languages de programmation html css et php
+                ainsi qu'a rendre le site visible via une machine virtuel sur Virtualbox. Nous avions un semstre pour réaliser ce projet de manière individuel afin d'apprendre à travailler en mode projet.
+
+            </p>
+        </div>
+
+        <div class="bloc-parcours">
+            <h3>Projet Symphony</h3>
+            <p>
+                Le projet Symphony est une réalisation en cours de production durant la second année de BTS SIO où par groupe de 2 nous 
+                devons réaliser le site internet d'un club sportif au choix en utilisant le framework Symphony sur une débian virtualbox Pour
+                développer nos compétances au sein d'une équipe en mode projet et pour apprendre l'utilisation de Github.
+            </p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 - Mon Portfolio</p>
+</footer>
+
+<script>
+const barres = document.getElementById("barres");
+const menuContenu = document.getElementById("menuContenu");
+
+barres.addEventListener("click", () => {
+    menuContenu.classList.toggle("open");
+});
+
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".menu-deroulant")) {
+        menuContenu.classList.remove("open");
+    }
+});
+</script>
+
+</body>
+</html>
