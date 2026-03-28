@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcours d'études - Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+    <a href="index.html" class="btn-retour" aria-label="Retour à l'accueil">
+        <span></span>
+    </a>
+
+    <div class="logo"></div>
+    <div class="menu-deroulant">
+        <div class="barres" id="barres">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+       <div class="menu-contenu" id="menuContenu">
+            <a href="contact.html">Contact</a>
+            <a href="veille.html">Veille technologique</a>
+            <a href="parcours.html">Information pratique</a>
+            <a href="competences.html">Compétences techniques</a>
+            <a href="projetbts.html">Projet durant le BTS</a>
+            <a href="cv.pdf" target="_blank" class="btn-cv">Voir mon CV</a>
+            <a href="cv.pdf" download class="btn-cv">Télécharger mon CV</a>
+        </div>
+    </div>
+
+</header>
+
+<main class="container">
+
+    <section class="intro">
+        <h1>Parcours d’études</h1>
+
+        <div class="bloc-parcours">
+            <h3>2024-2026 : BTS SIO SLAM - Campus Saint-Aspais Melun (77)</h3>
+            <p>
+En cours d'acquisition: cybersécurité des services informatiques
+tel que Algorithmique appliquée, production et fourniture de
+services informatiques, conception et maintenance de solutions.
+            </p>
+
+        <div class="bloc-parcours">
+            <h3>2021-2023 : L1 Sciences de la matière - Sorbonne Université</h3>
+
+        </div>
+        <div class="bloc-parcours">
+            <h3>2021 : Baccalauréat scientifique mention Math/physique - Lycée
+Simone Signoret Vaux-le-Pénil (77)</h3>
+
+        </div>
+                <div class="bloc-parcours">
+            <h3>Stage d'observation 3 ème</h3>
+            <p>
+J'ai fait un stage d'observation en 3ème dans le service décoration du parc Disneyland Paris à Paris - Marne La Vallée. J'y ai découvert le métier de graphiste, la notion de cahier des charges et la gestion d'équipe
+            </p>
+        </div>
+        <div class="bloc-parcours">
+            <h3>stage BTS 1 ère année 26/05/2025 - 04/07/2025</h3>
+            <p>
+
+J'ai travaillé pour l'association ED4free qui crée des d'outils numériques éducatifs
+comme l'EDbox et Fileserver à destination de l'Afrique et du
+Moyen Orient.
+J'ai dû creer des vidéos tutoriels pour guider les utilisateurs des
+produits et services de l'association.
+j'ai aussi été mis en relation avec une association cliente et j'ai dû modifier
+le tutoriel de Fileserver après analyse de la demande.
+J'ai participer à la réécriture de la documentation des produits EDbox et
+FileServer pour la rendre plus accessible aux utilisateurs.
+<a href="raport de stageED4free.pdf" target="_blank">rapport de stage</a>
+            </p>
+        </div>
+        <div class="bloc-parcours">
+            <h3>stage BTS 2 ème année 05/01/2026 - 06/02/2026</h3>
+            <p>
+
+J'ai travaillé pour l'organisation gouvernemental l'ONF (Office National des Forêts) au sein de l'équipe RENECOFOR qui est chargé d'analyser et constater les effets du réchauffement climatique sur les écosystèmes forestier à travers toute la France.
+
+La mission de mon stage a été de participer à migration de la base de donnée de RENECOFOR en créant un formulaire de saisie de l'ozone grâce à un logiciel de développement encore utiliser et avec de nouvelles fonctionalités et en facilitant l'utilisation de ce formulaire pour les utilisateurs sur le terrain.
+<a href="Rapport_de_stage_Beunas_Corentin_BTS_SIO_SLAM.pdf" target="_blank">rapport de stage</a>
+            </p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 - Mon Portfolio</p>
+</footer>
+
+
+<script>
+const barres = document.getElementById("barres");
+const menuContenu = document.getElementById("menuContenu");
+
+barres.addEventListener("click", () => {
+    menuContenu.classList.toggle("open");
+});
+
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".menu-deroulant")) {
+        menuContenu.classList.remove("open");
+    }
+});
+</script>
+
+</body>
+</html>

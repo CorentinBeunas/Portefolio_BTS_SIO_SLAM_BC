@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="btn-retour" aria-label="Retour à l'accueil">
+        <span></span>
+    </a>
+    <div class="logo"></div>
+
+ 
+    <div class="menu-deroulant">
+        <div class="barres" id="barres">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="menu-contenu" id="menuContenu">
+            <a href="contact.html">Contact</a>
+            <a href="veille.html">Veille technologique</a>
+            <a href="parcours.html">Information pratique</a>
+            <a href="competences.html">Compétences techniques</a>
+            <a href="projetbts.html">Projet durant le BTS</a>
+            <a href="cv_beunas_corentin_licence_informatique_en_apprentissage_ (1).pdf" target="_blank" class="btn-cv">Voir mon CV</a>
+            <a href="cv_beunas_corentin_licence_informatique_en_apprentissage_ (1).pdf" download class="btn-cv">Télécharger mon CV</a>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+
+
+    <section class="intro">
+        <h1>ME CONTACTER</h1>
+
+        <p>
+            Vous pouvez me contacter via ce formulaire.
+            Le message sera automatiquement préparé dans votre logiciel de messagerie.
+        </p>
+    
+        <div class="cadre-contact">
+    <form class="form-contact" onsubmit="envoyerMail(event)">
+      
+        <form class="form-contact" onsubmit="envoyerMail(event)">
+
+            <label>Nom   :</label>
+            <input type="text" id="nom" required>
+
+            <label>Prénom   :</label>
+            <input type="text" id="prenom" required>
+
+            <label>Email :</label>
+            <input type="email" id="email" required>
+
+            <label>Message   :</label>
+            <textarea id="message" rows="5" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+        </form>
+</div>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 - Mon Portfolio</p>
+</footer>
+
+
+<script>
+
+const barres = document.getElementById("barres");
+const menuContenu = document.getElementById("menuContenu");
+
+barres.addEventListener("click", () => {
+    menuContenu.classList.toggle("open");
+});
+
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".menu-deroulant")) {
+        menuContenu.classList.remove("open");
+    }
+});
+
+function envoyerMail(e) {
+    e.preventDefault();
+
+    const nom = document.getElementById("nom").value;
+    const prenom = document.getElementById("prenom").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    const destinataire = "corentinbeunas@gmail.com";
+    const sujet = encodeURIComponent("Contact depuis le portfolio");
+    const corps = encodeURIComponent(
+        "Nom : " + nom + "\n" +
+        "Prénom : " + prenom + "\n" +
+        "Email : " + email + "\n\n" +
+        "Message :\n" + message
+    );
+
+    window.location.href =
+        `mailto:${destinataire}?subject=${sujet}&body=${corps}`;
+}
+</script>
+
+</body>
+</html>
