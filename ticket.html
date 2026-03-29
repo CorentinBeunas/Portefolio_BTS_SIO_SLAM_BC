@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet - Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="btn-retour" aria-label="Retour à l'accueil">
+        <span></span>
+    </a>
+    <div class="logo"></div>
+
+    <div class="menu-deroulant">
+        <div class="barres" id="barres">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="menu-contenu" id="menuContenu">
+            <a href="contact.html">Contact</a>
+            <a href="veille.html">Veille technologique</a>
+            <a href="parcours.html">Information pratique</a>
+            <a href="competences.html">Compétences techniques</a>
+            <a href="projetbts.html">Projet durant le BTS</a>
+            <a href="cv_beunas_corentin_licence_informatique_en_apprentissage_ (1).pdf" target="_blank" class="btn-cv">Voir mon CV</a>
+            <a href="cv_beunas_corentin_licence_informatique_en_apprentissage_ (1).pdf" download class="btn-cv">Télécharger mon CV</a>
+        </div>
+    </div>
+</header>
+
+<main class="container projet2">
+
+    <section class="intro intro-projet2">
+        <h1>Campus HelpDesk</h1>
+        <div class="cadreimage">
+    <img src="Capture d'écran 2026-03-29 181441.png" alt="Photo de présentation" class="image-portfolioprojet2">
+</div>  
+         <div class="cadreimage">
+    <img src="Capture d'écran 2026-03-29 184712.png" alt="Photo de présentation" class="image-portfolioprojet2">
+</div>
+<div class="cadreimage">
+    <img src="Capture d'écran 2026-03-29 175952.png" alt="Photo de présentation" class="image-portfolioprojet2">
+</div>
+
+         <h2>Présentation du sujet</h2><br>
+        <p>
+
+
+            Le but de ce projet a été de créer un service de ticketing pour un établissement qui aurait besoin d'un service de support informatique pour les étudiants.
+            Pour cela le service s'articule autour des compte étudiants et du compte technicien. Pour cela les étudiants peuvent créer un ticket avec le moyen de définir
+            si c'est un problème de matériel, réseau, logiciel. Puis il y a la possiblité de communiquer avec le technicien pour lui donner plus d'informations afin de regler le problème le plus rapidement.
+            Puis il y a la possibilité de voir ses propres tickets et l'avancement de la resolution de ceux-ci.
+
+            Dans un second temps Le technicien peut voir toutes les demandes de tickets et les selectionner afin de détermier leur
+            niveau de priorité ainsi qu'en changeant le status du ticket pour indiquer si le problème est en cours de résolution ou s'il est résolu. Il peut aussi communiquer avec l'étudiant pour lui demander plus d'informations ou lui indiquer que le problème est réglé.
+
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 - Mon Portfolio</p>
+</footer>
+
+<script>
+const barres = document.getElementById("barres");
+const menuContenu = document.getElementById("menuContenu");
+
+barres.addEventListener("click", () => {
+    menuContenu.classList.toggle("open");
+});
+
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".menu-deroulant")) {
+        menuContenu.classList.remove("open");
+    }
+});
+</script>
+
+</body>
+</html>

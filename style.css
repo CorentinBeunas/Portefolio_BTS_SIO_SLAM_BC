@@ -233,8 +233,8 @@ footer {
 }
 
 .image-portfolio {
-    width: 250px;        /* taille fixe plus petite */
-    height: auto;        /* garde les proportions */
+    width: 250px;        
+    height: auto;        
     margin: 20px 0;
 }
 .image-portfolioprojet2 {
